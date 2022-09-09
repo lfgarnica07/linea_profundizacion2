@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "181110679638",
+    "project_id": "linea2-2eab6",
+    "storage_bucket": "linea2-2eab6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181110679638:android:35fab6ecf53541856033f7",
+        "android_client_info": {
+          "package_name": "co.edu.ucundinamarca.linea_profundizacion2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181110679638-b6ru8jhnk8d2c6okbolvj1r1e9g0b9ns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCiqdwqlEctkei0rJGzNWmaGu6DPvICok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181110679638-b6ru8jhnk8d2c6okbolvj1r1e9g0b9ns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
