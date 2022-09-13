@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:linea_profundizacion2/Vista/RegistrarUsuario.dart';
+import 'package:linea_profundizacion2/Vista/api_rest.dart';
+import 'package:linea_profundizacion2/Vista/productos.dart';
+import 'package:linea_profundizacion2/carrito/carrito.dart';
+import 'package:provider/provider.dart';
 import 'Vista/Login.dart';
-import 'Vista/Registro.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create:(context)=>carrito(),
+      child: MyApp(),
+    ));
 }
 
 class MyApp extends StatelessWidget {
@@ -29,10 +38,10 @@ class HomeStart extends State<Home> {
       debugShowCheckedModeBanner: false,
       title: 'Bienvenidos',
       home: Scaffold(
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.white70,
         appBar: AppBar(
           title: Text('Inicio'),
-          backgroundColor: Colors.blue,
+          backgroundColor: Color.fromRGBO(205, 16, 77, 10),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -47,6 +56,9 @@ class HomeStart extends State<Home> {
                           context, MaterialPageRoute(builder: (_) => Login()));
                     },
                     child: Text('Entrar'),
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(205, 16, 77, 10))
+                    ),
                   ),
                 ),
               ),
@@ -57,9 +69,12 @@ class HomeStart extends State<Home> {
                     onPressed: () {
                       print('Boton Presionado');
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (_) => registro()));
+                          context, MaterialPageRoute(builder: (_) => RegistrarUsuario()));
                     },
                     child: Text('Registrar'),
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(205, 16, 77, 10))
+                    ),
                   ),
                 ),
               ),
